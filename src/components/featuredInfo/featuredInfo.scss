@@ -1,0 +1,58 @@
+.featured{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 20px;
+    box-sizing: border-box; //sasta jugad xd
+    // :nth-child(1){
+    //     margin-left: 20px !important;
+    // }
+    // :nth-last-child(1){
+    //     margin-right: 20px !important;
+    // }
+    //TODO: this isn't working as expected
+    .sub{
+        font-size: 15px;
+        color: gray;
+    }
+    .item{
+        margin-left: 20px;
+        cursor: pointer;
+        flex: 1;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all .5s ease;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        }
+        // margin-right: 20px !important; //debugging hori ji bhot bhankar
+        .title{
+            font-size: 20px;
+        }
+        .money-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0px;
+            .money{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .money-rate{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 5%;
+                .arrow-icon{
+                    font-size: 18px;
+                    margin-left: 5px;
+                    color: rgb(52, 214, 65);
+                    &.negative{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
