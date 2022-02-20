@@ -7,7 +7,10 @@
     top: 65px;
     overflow: auto;
     resize: horizontal;
-
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     &::-webkit-scrollbar {
         width: 2px;
     }
