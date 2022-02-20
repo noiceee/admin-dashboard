@@ -1,6 +1,6 @@
 import './userlist.scss';
 
-export default ()=>{
+export default function(){
     return (
         <div className="UserList">
             UserList
