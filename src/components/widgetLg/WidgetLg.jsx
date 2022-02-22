@@ -1,6 +1,6 @@
 import "./widgetlg.scss";
 
-export default function(){
+export default function WidgetLg(){
 
   const Button = ({type})=>{
     return <button className={type} >{type}</button>
