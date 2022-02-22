@@ -4,17 +4,20 @@ import './app.scss';
 import Home from "./pages/home/Home";
 import { Routes, Route} from "react-router-dom";
 import UserList from "./pages/userList/UserList";
+import User from "./pages/user/User";
+import { useState } from "react";
 
 function App() {
-  let activePage = 'home';
+  const [activePage, setActivePage] = useState('home');
   return (
     <div>
       <TopBar />
       <div className="container">
-        <SideBar activePage={activePage}/>
+        <SideBar activePage={activePage} setActivePage = {setActivePage}/>
         <Routes>
-          <Route path="/users" element={<UserList />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setActivePage = {setActivePage}/>} />
+          <Route path="/users" element={<UserList setActivePage = {setActivePage}/>} />
+          <Route path="/user/:userid" element={<User/>} />
         </Routes>
       </div>
     </div>
