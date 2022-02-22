@@ -26,7 +26,7 @@ export default function SideBar({activePage, setActivePage}) {
           <h3 className="sidebar-title">Dashboard</h3>
           <ul className="sidebar-list">
             <Link to='/'>
-              <li className= {`sidebar-list-item ${activePage == 'home' ? 'active': null}`} onClick={()=>setActivePage('home')} >
+              <li className= {`sidebar-list-item ${activePage === 'home' ? 'active': null}`} onClick={()=>setActivePage('home')} >
                 <LineStyle className="sidebar-icon" />
                 Home
               </li>
@@ -46,7 +46,7 @@ export default function SideBar({activePage, setActivePage}) {
           <h3 className="sidebar-title">Quick Menu</h3>
           <ul className="sidebar-list">
             <Link to="/users">
-              <li className= {`sidebar-list-item ${activePage == 'users' ? 'active': null}`} onClick={()=>setActivePage('users')}>
+              <li className= {`sidebar-list-item ${activePage === 'users' ? 'active': null}`} onClick={()=>setActivePage('users')}>
                 <PermIdentity className="sidebar-icon" />
                 Users
               </li>
