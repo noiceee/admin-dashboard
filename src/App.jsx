@@ -6,6 +6,8 @@ import { Routes, Route} from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
 import { useState } from "react";
+import NewUser from "./pages/newUser/NewUser";
+import Products from "./pages/products/Products";
 
 function App() {
   const [activePage, setActivePage] = useState('home');
@@ -17,7 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home setActivePage = {setActivePage}/>} />
           <Route path="/users" element={<UserList setActivePage = {setActivePage}/>} />
-          <Route path="/user/:userid" element={<User/>} />
+          <Route path="/user/:userid" element={<User setActivePage = {setActivePage} />} />
+          <Route path="/newUser" element={<NewUser setActivePage = {setActivePage} />} />
+        <Route path="/products" element={<Products setActivePage = {setActivePage} />} />
         </Routes>
       </div>
     </div>

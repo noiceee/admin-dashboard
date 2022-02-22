@@ -18,15 +18,20 @@ import { Link } from "react-router-dom";
 // import interact from
 // 'https://cdn.interactjs.io/v1.10.11/interactjs/index.js'
 
-export default function SideBar({activePage, setActivePage}) {
+export default function SideBar({ activePage, setActivePage }) {
   return (
     <div className="sidebar">
       <div className="sidebar-wrapper">
         <div className="sidebar-menu">
           <h3 className="sidebar-title">Dashboard</h3>
           <ul className="sidebar-list">
-            <Link to='/'>
-              <li className= {`sidebar-list-item ${activePage === 'home' ? 'active': null}`} onClick={()=>setActivePage('home')} >
+            <Link to="/">
+              <li
+                className={`sidebar-list-item ${
+                  activePage === "home" ? "active" : null
+                }`}
+                onClick={() => setActivePage("home")}
+              >
                 <LineStyle className="sidebar-icon" />
                 Home
               </li>
@@ -46,15 +51,27 @@ export default function SideBar({activePage, setActivePage}) {
           <h3 className="sidebar-title">Quick Menu</h3>
           <ul className="sidebar-list">
             <Link to="/users">
-              <li className= {`sidebar-list-item ${activePage === 'users' ? 'active': null}`} onClick={()=>setActivePage('users')}>
+              <li
+                className={`sidebar-list-item ${
+                  activePage === "users" ? "active" : null
+                }`}
+                onClick={() => setActivePage("users")}
+              >
                 <PermIdentity className="sidebar-icon" />
                 Users
               </li>
             </Link>
-            <li className="sidebar-list-item">
-              <Storefront className="sidebar-icon" />
-              Products
-            </li>
+            <Link to="/products">
+              <li
+                className={`sidebar-list-item ${
+                  activePage === "products" ? "active" : null
+                }`}
+                onClick={() => setActivePage("users")}
+              >
+                <Storefront className="sidebar-icon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebar-list-item">
               <AttachMoney className="sidebar-icon" />
               Transactions
