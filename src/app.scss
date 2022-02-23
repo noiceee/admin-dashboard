@@ -1,7 +1,19 @@
-html, body{
+html,
+body {
     height: 100%;
 }
-.container{
+
+.container {
     display: flex;
     width: 100%;
+}
+
+.shadow-container {
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all .5s ease;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    }
 }
