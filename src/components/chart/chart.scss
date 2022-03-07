@@ -3,7 +3,13 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-h3.title{
-    margin-bottom: 20px;
+    @media screen and (max-width: 1080px) {
+        padding: 30px 20px;
+        h3.title{
+            margin-left: 10px;
+        }
+    }
+    h3.title{
+        margin-bottom: 20px;
+    }
 }

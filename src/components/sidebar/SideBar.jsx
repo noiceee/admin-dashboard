@@ -15,12 +15,16 @@ import {
 import React from "react";
 import "./sidebar.scss";
 import { Link } from "react-router-dom";
-// import interact from
-// 'https://cdn.interactjs.io/v1.10.11/interactjs/index.js'
+import { useContext } from "react";
+import sideBarContext from "../../contexts/sideBarContext";
+
 
 export default function SideBar({ activePage, setActivePage }) {
+
+  const {sideBarToggled} = useContext(sideBarContext);
+
   return (
-    <div className="sidebar">
+    <div className= {`sidebar ${sideBarToggled?"active" : null}`}>
       <div className="sidebar-wrapper">
         <div className="sidebar-menu">
           <h3 className="sidebar-title">Dashboard</h3>

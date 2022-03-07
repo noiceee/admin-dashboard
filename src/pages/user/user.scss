@@ -23,6 +23,8 @@
 .userContainer {
   display: flex;
   margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .userShow {
@@ -47,7 +49,6 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
       rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
-  margin-left: 20px;
 }
 
 .userShowTop {
@@ -108,8 +109,13 @@
 
 .userUpdateForm {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
   justify-content: space-between;
   margin-top: 20px;
+  @media (max-width: 530px) {
+    justify-content: center;
+  }
 }
 
 .userUpdateItem {
@@ -135,6 +141,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 30px;
+  row-gap: 20px;
 }
 
 .userUpdateUpload {

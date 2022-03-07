@@ -22,7 +22,6 @@ export default function UserList({setActivePage}) {
       headerName: "User",
       width: 180,
       renderCell: (params) => {
-        console.log(params);
         return (
           <div className="userListUser">
             <img className="userListImg" src={params.row.avatar} alt="" />

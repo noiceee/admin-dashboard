@@ -10,42 +10,47 @@ import NewUser from "./pages/newUser/NewUser";
 import Products from "./pages/products/Products";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import SideBarContext from "./contexts/sideBarContext";
 
 function App() {
   const [activePage, setActivePage] = useState("home");
+  const [sideBarToggled, sideBarToggler] = useState(false);
+
   return (
     <div>
-      <TopBar />
-      <div className="container">
-        <SideBar activePage={activePage} setActivePage={setActivePage} />
-        <Routes>
-          <Route path="/" element={<Home setActivePage={setActivePage} />} />
-          <Route
-            path="/users"
-            element={<UserList setActivePage={setActivePage} />}
-          />
-          <Route
-            path="/user/:userid"
-            element={<User setActivePage={setActivePage} />}
-          />
-          <Route
-            path="/newUser"
-            element={<NewUser setActivePage={setActivePage} />}
-          />
-          <Route
-            path="/products"
-            element={<Products setActivePage={setActivePage} />}
-          />
-          <Route
-            path="/product/:productid"
-            element={<Product setActivePage={setActivePage} />}
-          />
-          <Route
-            path="/newProduct"
-            element={<NewProduct setActivePage={setActivePage} />}
-          />
-        </Routes>
-      </div>
+      <SideBarContext.Provider value={{sideBarToggled, sideBarToggler}}>
+        <TopBar />
+        <div className="container">
+          <SideBar activePage={activePage} setActivePage={setActivePage} />
+          <Routes>
+            <Route path="/" element={<Home setActivePage={setActivePage} />} />
+            <Route
+              path="/users"
+              element={<UserList setActivePage={setActivePage} />}
+            />
+            <Route
+              path="/user/:userid"
+              element={<User setActivePage={setActivePage} />}
+            />
+            <Route
+              path="/newUser"
+              element={<NewUser setActivePage={setActivePage} />}
+            />
+            <Route
+              path="/products"
+              element={<Products setActivePage={setActivePage} />}
+            />
+            <Route
+              path="/product/:productid"
+              element={<Product setActivePage={setActivePage} />}
+            />
+            <Route
+              path="/newProduct"
+              element={<NewProduct setActivePage={setActivePage} />}
+            />
+          </Routes>
+        </div>
+      </SideBarContext.Provider>
     </div>
   );
 }

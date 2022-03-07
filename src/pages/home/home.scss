@@ -2,8 +2,13 @@
     flex:4;
     max-width: calc(100%*0.8);
     margin-top: 20px;
+    @media screen and (max-width: 1080px) {
+        max-width: 100%;
+    }
     .home-widgets{
         margin: 20px;
         display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
